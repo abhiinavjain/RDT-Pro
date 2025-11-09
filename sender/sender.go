@@ -61,6 +61,6 @@ func main() {
 
 func errcheck(err error) {
 	if err != nil {
-		log.Fatal("Error: %s", err)
+		log.Printf("Error: %s", err)
 	}
 }
