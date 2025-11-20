@@ -3,6 +3,8 @@
 #include <string.h>
 #include <winsock2.h>
 #include "packet.h"
+#include <time.h>
+
 
 void error(char *msg){
     perror(msg);
@@ -54,8 +56,18 @@ int main(int argc, char *argv[]){
 
         if (n==SOCKET_ERROR){
             error("Error in recvfrom ");
+  //          continue;
 
         }
+
+        // if((rand()%10) <3){
+        //     printf("simulating oacket loss %d", pkt.seqnum);
+        //     continue;
+        // }
+
+
+
+
 
         printf("Recieved sequence no: %d", pkt.seqnum );
         AckPacket ack;
