@@ -63,7 +63,7 @@ int main(int argc, char *argv[]){
 
         sendto(server_socket, (char*)&ack, sizeof(ack),0, (struct sockaddr *)&client_addr, addr_len);
 
-        if(pkt.seqnum=expected_seq){
+        if(pkt.seqnum==expected_seq){
             if(pkt.islast){
                 break;
             }
