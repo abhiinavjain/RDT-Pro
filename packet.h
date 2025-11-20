@@ -1,15 +1,16 @@
 #ifndef PACKET_H
 #define PACKET_H
 
-typedef struct {
-    int seq_num;
+typedef struct{
+    int seqnum;
     int size;
-    int is_last;
+    int islast;
     char data[1024];
 } Packet;
 
 typedef struct {
-    int ack_num;
+    int ackNum;
+
 } AckPacket;
 
 #endif
