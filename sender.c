@@ -26,7 +26,7 @@ int main(int argc, char *argv[]){
     if((client_socket = socket(AF_INET, SOCK_DGRAM, 0))== INVALID_SOCKET){
         error("Error opening socket");
     }
-    DWORD timeout = 2000;
+    DWORD timeout = 10000;
     if (setsockopt(client_socket, SOL_SOCKET, SO_RCVTIMEO, (const char*)&timeout, sizeof(timeout))<0){
         error("Error setting timeout");
 

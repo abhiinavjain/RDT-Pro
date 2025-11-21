@@ -18,6 +18,8 @@ int main(int argc, char *argv[]){
 
     }
 
+    // argv = reciever.exe 8080 output.txt
+
     WSADATA wsa;
 
     if(WSAStartup(MAKEWORD(2,2), &wsa) != 0){
